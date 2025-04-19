@@ -1,22 +1,53 @@
-# 🎙️ Maximus: Your Voice-Controlled AI Assistant
+# 🎙️ Maximus - Your Personal AI Voice Assistant
 
-Maximus is a desktop-based voice assistant built using Python. With a focus on simplicity and core functionality, Maximus allows users to interact through voice commands to perform everyday productivity tasks like adding to-do items, showing their task list, and creating notes — all hands-free.
+Maximus is a Python-based voice assistant designed to make your everyday tasks more fun and hands-free! Whether you want to create a note, manage your to-dos, hear a joke, or play a game, Maximus is here to help — with voice input and speech output.
 
-## ✨ Features
+## 🧠 Features
 
-- 🔊 **Voice Interaction**: Talk to Maximus — it listens and responds naturally.
-- 🗒️ **Create Notes**: Dictate notes and Maximus will save them to a text file.
-- ✅ **To-Do List Management**:
-  - Add tasks via voice.
-  - Show all saved tasks.
-- 🎚️ **Natural Voice Feedback**: Male voice response with controlled speech rate for a more natural experience.
-- 🧠 **Intent Classification**: Uses token-based keyword detection to understand user intentions.
+### ✅ General Capabilities
+- **Voice Activation**: Responds to spoken commands using `speech_recognition`.
+- **Text-to-Speech**: Talks back using `pyttsx3` with a customizable male voice.
+- **Smart Greeting**: Welcomes you with personalized messages.
 
-## 🚀 Getting Started
+### 📝 Task & Note Management
+- **Create a Note**: Speak your note, and Maximus will save it in `notes.txt`.
+- **To-do List**:
+  - Add items by voice.
+  - View the current to-do list.
+  - Data is saved persistently in `todos.txt`.
 
-### Prerequisites
+### 😂 Fun & Entertainment
+- **Jokes**: Pulls a random joke from `jokes.txt`.
+- **Quotes**: Inspires you with a quote from `quotes.txt`.
+- **Facts**: Shares a random interesting fact from `facts.txt`.
 
-Make sure you have Python 3.x installed. Then install the following Python packages:
+### 🎮 Games
+- **Guessing Game**: Try to guess a number Maximus is thinking of (1–10).
+- **Rock-Paper-Scissors**: Classic game played via voice commands.
+
+### 📚 Storytelling
+- **Random Stories**: Listen to short, fun stories from Maximus.
+
+### 😊 Mood Checker
+- **Emotional Interaction**: Asks how you're feeling and responds appropriately.
+  - If you're sad, Maximus might cheer you up with a joke!
+
+### 🚪 Exit Command
+- **Quit Program**: Say "exit", "quit", or "bye" to close Maximus.
+
+---
+
+---
+
+## 🛠️ Requirements
+
+- Python 3.7+
+- Microphone
+
+### 📦 Dependencies
+
+Install all required packages using:
 
 ```bash
-pip install SpeechRecognition pyttsx3 nltk
+pip install speechrecognition pyttsx3 nltk
+
