@@ -29,6 +29,8 @@ JOKES_FILE = "jokes.txt"
 QUOTES_FILE = "quotes.txt"
 FACTS_FILE = "facts.txt"
 
+
+# loads from the txt files
 def load_file_lines(filename):
     """Load lines from a file, return empty list if file doesn't exist."""
     if os.path.exists(filename):
@@ -46,6 +48,7 @@ def save_todos():
         for item in todo_list:
             f.write(f"{item}\n")
 
+
 def speak(text):
     """Safe speaking function with error handling"""
     try:
@@ -55,14 +58,17 @@ def speak(text):
     except Exception as e:
         print(f"Speech error: {e}")
 
+# When I loads up
 def greet1():
     speak("I am Maximus! How can I help?")
     print("I am Maximus! How can I help?")
 
+# IF you say hello, hi etc
 def greet2():
     speak("O hey there, Hope you are having a wonderful day, How can I help?")
     print("O hey there, Hope you are having a wonderful day, How can I help?")
 
+# For creating a new note
 def create_note():
     try:
         speak("What should the note say?")
@@ -84,6 +90,7 @@ def create_note():
         print(f"ERROR in create_note: {e}")
         speak("Sorry, I couldn't create the note. Please try again.")
 
+# For adding a new task to the list
 def add_todo():
     try:
         speak("What should I add to your to-do list?")
@@ -104,6 +111,7 @@ def add_todo():
         print(f"ERROR in add_todo: {e}")
         speak("Sorry, I didn't catch that. Please try again.")
 
+# For speaking out the todo tasks
 def show_todos():
     if not todo_list:
         speak("Your to-do list is empty!")
@@ -234,6 +242,7 @@ def quit_program():
     print("Goodbye!")
     sys.exit(0)
 
+# This function serves as the crux of the program. It checks what the user has told the assistant and checks what the user wants
 def intent_classifier(message):
     try:
         print(f"User said: {message}")
